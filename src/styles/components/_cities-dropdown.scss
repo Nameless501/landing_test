@@ -1,0 +1,115 @@
+@use '../abstracts' as *;
+
+.cities-dropdown {
+  @include reset;
+  @include flex-column;
+  align-items: flex-start;
+  gap: 12px;
+
+  &__button {
+    @include reset-button;
+    @include flex-center-vertical;
+    gap: 3px;
+  }
+
+  &__button-title {
+    @include reset;
+    @include font-params(
+      $font-family-secondary,
+      18px,
+      600,
+      20px
+    );
+  }
+
+  &__button-icon {
+    @include reset;
+    @include background-image(
+      'arrow-filled.svg',
+      bottom,
+      7px 5px,
+    );
+    width: 8px;
+    height: 5px;
+    background-color: transparent;
+    border: 0;
+    display: none;
+  }
+
+  &__cities-list {
+    @include reset-list;
+    @include flex-column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  &__city-name {
+    @include reset;
+    @include font-params(
+      $font-family-secondary,
+      18px,
+      400,
+      20px
+    );
+  }
+
+  @include breakpoint ($breakpoint-m) {
+    &__button-title {
+      @include font-params(
+        null,
+        14px,
+        600,
+        14px
+      );
+    }
+
+    &__city-name {
+      @include font-params(
+        null,
+        14px,
+        400,
+        14px
+      );
+    }
+  }
+
+  @include breakpoint ($breakpoint-s) {
+    &__cities-list {
+      display: none;
+    }
+
+    &__cities-list:is(.active) {
+      display: flex;
+    }
+
+    &__button-title {
+      @include font-params(
+        null,
+        14px,
+        600,
+        14px
+      );
+    }
+
+    &__button:is(.active) &__button-title {
+      color: $color-font-red;
+    }
+
+    &__button-icon {
+      display: block;
+    }
+
+    &__button:is(.active) &__button-icon {
+      transform: rotate(180deg);
+    }
+
+    &__city-name {
+      @include font-params(
+        null,
+        14px,
+        400,
+        14px
+      );
+    }
+  }
+}

@@ -1,0 +1,23 @@
+-
+  const areasCards = [
+    { title: 'Решения Softline', text: 'ГК Softline предлагает клиентам собственную линейку оборудования (ПК, серверы, торговое оборудование и проч.), разработку программных продуктов, облачных решений, решений в области информационной безопасности.', class: 'area-card_type_solutions', id: 'dropdown-areas-solutions' },
+    { title: 'Кибербезопасность', text: 'Softline обладает всеми необходимыми государственными лицензиями для организации проектов по информационной безопасности и аттестации.', class: 'area-card_type_security', id: 'dropdown-areas-security' },
+    { title: 'Импортозамещение', text: 'ГК Softline обладает широчайшим портфелем решений и услуг для импортозамещения, включая ПО и оборудование собственного производства.', class: 'area-card_type_replacement', id: 'dropdown-areas-replacement' },
+    { title: 'Облачные решения', text: 'Softline использует современные облачные решения как российских, так и международных вендоров для масштабирования бизнеса своих клиентов. Подписки, услуги, трансформация.', class: 'area-card_type_cloud', id: 'dropdown-areas-cloud' },
+    { title: 'Цифровая трансформация и разработка ПО', text: 'Softline использует современные технологи и новые возможности для увеличения производительности бизнеса заказчика. В штате ГК Softline - 2000+ разработчиков, которые трансформируют ПО под нужды конкретного предприятия.', class: 'area-card_type_transformation', id: 'dropdown-areas-transformation' },
+    { title: 'Техническая поддержка Softline', text: '200+ инженеров, 24 часа в сутки, 7 дней в неделю, 12 месяцев в году, сервисное партнерство с 30+ мировыми производителями.', class: 'area-card_type_support', id: 'dropdown-areas-support' },
+  ]
+
+section.areas.content__areas
+  h2.title.title_place_areas.areas__title Направления бизнеса
+  ul.areas__cards-list
+    each card in areasCards
+      li
+        article.area-card.areas__cards-list-item(id=card.id, class=card.class)
+          div.area-card__content-wrapper
+
+            button.area-card__button(role='dropdown', data-dropdown-label=card.id)
+              span.title.title_place_area-card.area-card__button-title= card.title
+              span.area-card__button-icon
+
+            p.area-card__text= card.text

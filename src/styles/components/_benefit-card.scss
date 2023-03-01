@@ -1,0 +1,86 @@
+@use '../abstracts' as *;
+
+.benefit-card {
+  padding: 0;
+  box-sizing: border-box;
+  width: 178px;
+
+  @include flex-column-center;
+  gap: 10px;
+
+  &__image-wrapper {
+    @include reset;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background-color: rgb(0,0,0, .05);
+    @include flex-center;
+  }
+
+  &__image {
+    @include reset;
+    display: block;
+    max-width: 66px;
+    height: 48px;
+    object-position: 50% 50%;
+    object-fit: contain;
+  }
+
+  &__caption {
+    @include reset;
+    @include font-params(
+      $font-family-main,
+      18px,
+      400,
+      20px
+    );
+    text-align: center;
+  }
+
+  @include breakpoint ($breakpoint-m) {
+    & {
+      width: 140px;
+    }
+
+    &__image-wrapper {
+      width: 100px;
+      height: 100px;
+    }
+
+    &__image {
+      max-width: 58px;
+      height: 40px;
+    }
+
+    &__caption {
+      @include font-params(
+        null,
+        15px,
+        400,
+        1.1em
+      );
+    }
+  }
+
+  @include breakpoint ($breakpoint-s) {
+    & {
+      width: 120px;
+      gap: 13px;
+
+      &_place_motivation {
+        width: 80px;
+        gap: 11px;
+      }
+    }
+
+    &__image-wrapper {
+      width: 80px;
+      height: 80px;
+    }
+
+    &__image {
+      max-width: 48px;
+      height: 35px;
+    }
+  }
+}

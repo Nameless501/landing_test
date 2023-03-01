@@ -1,0 +1,11 @@
+-
+  const links = [
+    { url: '*', text: 'Облачные решения' },
+    { url: '*', text: 'Кибербезопасность' },
+    { url: '*', text: 'Импортозамещение' },
+    { url: '*', text: 'Цифровая трансформация' }
+  ]
+
+nav.navigation-links.header__navigation-links
+  each link in links
+    a.navigation-links__item(href=link.url)= link.text

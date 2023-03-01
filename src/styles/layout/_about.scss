@@ -1,0 +1,60 @@
+@use '../abstracts' as *;
+
+.about {
+  padding: 0 70px;
+  box-sizing: border-box;
+  width: 100%;
+
+  &__card {
+    @include reset;
+    width: 100%;
+    padding: 99px 110px;
+    box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.08);
+  }
+
+  &__text {
+    @include reset;
+    @include font-params(
+      $font-family-main,
+      32px,
+      600,
+      38px,
+    );
+    text-align: center;
+  }
+
+  &__text-accent {
+    @include reset;
+    color: $color-font-dark-red;
+  }
+
+  @include breakpoint ($breakpoint-m) {
+    & {
+      padding: 0 30px;
+    }
+
+    &__card {
+      padding: 50px 30px;
+    }
+  }
+
+  @include breakpoint ($breakpoint-s) {
+    & {
+      padding: 0;
+    }
+
+    &__card {
+      padding: 22px 6px;
+      box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.08);
+    }
+
+    &__text {
+      @include font-params(
+        null,
+        16px,
+        600,
+        1.2em,
+      );
+    }
+  }
+}

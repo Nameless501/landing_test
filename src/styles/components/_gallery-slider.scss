@@ -1,0 +1,80 @@
+@use '../abstracts' as *;
+
+.gallery-slider {
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+  position: relative;
+  @include flex-column;
+  gap: 37px;
+
+  &__controls {
+    @include reset;
+    @include absolute-position(-36px, null, null, 0);
+    @include flex-center-horizontal;
+    gap: 20px;
+    transform: translateY(-100%);
+  }
+
+  &__button {
+    margin: 0;
+  }
+
+  &__slider-wrapper {
+    @include reset;
+    overflow: hidden;
+  }
+
+  &__slides-list {
+    @include reset-list;
+    width: max-content;
+    @include flex-center;
+  }
+
+  &__slide {
+    @include reset;
+  }
+
+  &__slide-image {
+    @include reset;
+    display: block;
+    width: 100%;
+    height: 834px;
+    object-fit: cover;
+  }
+
+  &__pagination {
+    @include reset-list;
+    width: 100%;
+    @include flex-center-vertical;
+    gap: 10px;
+  }
+
+  @include breakpoint ($breakpoint-m) {
+    & {
+      gap: 25px;
+    }
+
+    &__controls {
+      top: -20px;
+    }
+
+    &__slide-image {
+      height: 550px;
+    }
+  }
+
+  @include breakpoint ($breakpoint-s) {
+    &__controls {
+      display: none;
+    }
+
+    &__pagination {
+      display: none;
+    }
+
+    &__slide-image {
+      height: 210px;
+    }
+  }
+}

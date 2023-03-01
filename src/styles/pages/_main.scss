@@ -1,0 +1,16 @@
+@use '../abstracts' as *;
+
+.main {
+  max-width: $max-content-width;
+  min-width: $min-content-width;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+
+  @include breakpoint ($breakpoint-s) {
+    & {
+      padding: 0 15px;
+    }
+  }
+}

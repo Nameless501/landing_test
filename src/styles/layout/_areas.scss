@@ -1,0 +1,70 @@
+@use '../abstracts' as *;
+
+.areas {
+  padding: 0;
+  width: 100%;
+  box-sizing: border-box;
+
+  @include flex-column;
+  align-items: center;
+  gap: 55px;
+
+  &__title {
+    margin: 0;
+  }
+
+  &__cards-list {
+    @include reset-list;
+    width: 100%;
+
+    display: grid;
+    grid-auto-rows: 260px;
+    grid-template-columns: repeat(auto-fill, 615px);
+    gap: 22px 20px;
+    justify-content: center;
+
+    li {
+      @include reset;
+    }
+  }
+
+  &__cards-list-item {
+    margin: 0;
+  }
+
+  @include breakpoint ($breakpoint-l) {
+    & {
+      padding: 0 30px;
+      gap: 40px;
+    }
+
+    &__cards-list {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+  }
+
+  @include breakpoint ($breakpoint-m) {
+    & {
+      padding: 0 15px;
+      gap: 30px;
+    }
+
+    &__cards-list {
+      grid-template-columns: 615px;
+    }
+  }
+
+  @include breakpoint ($breakpoint-s) {
+    & {
+      padding: 0 5px;
+      gap: 15px;
+    }
+
+    &__cards-list {
+      grid-auto-rows: min-content;
+      grid-template-columns: 280px;
+      gap: 10px;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+@use '../abstracts' as *;
+
+.maps-slider {
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+  overflow: hidden;
+
+  &__slides-list {
+    @include reset-list;
+    width: max-content;
+    @include flex-center;
+  }
+
+  &__slide {
+    @include reset;
+  }
+
+  &__slide-image {
+    @include reset;
+    display: block;
+    width: 100%;
+    height: 604px;
+    object-fit: contain;
+  }
+
+  @include breakpoint ($breakpoint-s) {
+    &__slide {
+      height: 383px;
+      overflow: scroll;
+    }
+
+    &__slide-image {
+      width: max-content;
+      height: 445px;
+    }
+  }
+}

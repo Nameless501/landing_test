@@ -1,0 +1,140 @@
+@use '../abstracts' as *;
+
+.title {
+  padding: 0;
+
+  &_place_lead {
+    max-width: 709px;
+
+    @include font-params($font-family-main,
+      56px,
+      600,
+      56px);
+
+    @include breakpoint ($breakpoint-s) {
+      & {
+        max-width: 100%;
+        @include font-params(null,
+          28px,
+          600,
+          28px);
+      }
+    }
+  }
+
+  &_place_mission {
+    @include font-params($font-family-main,
+      56px,
+      600,
+      56px,
+      $color-font-white );
+
+    @include breakpoint ($breakpoint-s) {
+      & {
+        @include font-params(null,
+          28px,
+          600,
+          28px);
+        text-align: center;
+      }
+    }
+  }
+
+  &_place_areas {
+    @include font-params($font-family-main,
+      56px,
+      600,
+      56px);
+
+    @include breakpoint ($breakpoint-s) {
+      & {
+        @include font-params(null,
+          28px,
+          600,
+          28px);
+        text-align: center;
+      }
+    }
+  }
+
+  &_place_area-card {
+    @include font-params($font-family-main,
+      24px,
+      600,
+      24px,
+      $color-font-white );
+
+    @include breakpoint ($breakpoint-s) {
+      & {
+        @include font-params(null,
+          20px,
+          600,
+          20px);
+        text-align: left;
+        max-width: 229px;
+      }
+    }
+  }
+
+  &_place_benefits-compensation {
+    @include font-params($font-family-main,
+      56px,
+      600,
+      56px);
+    text-align: center;
+
+    @include breakpoint ($breakpoint-s) {
+      & {
+        @include font-params(null,
+          28px,
+          600,
+          28px);
+      }
+    }
+  }
+
+  &_place_benefits-motivation {
+    max-width: 750px;
+    @include font-params($font-family-main,
+      40px,
+      600,
+      48px);
+    text-align: center;
+
+    .title__span {
+      color: $color-font-dark-red;
+      line-height: 52px;
+    }
+
+    @include breakpoint ($breakpoint-s) {
+      & {
+        max-width: 100%;
+        @include font-params(null,
+          22px,
+          600,
+          1.2em);
+      }
+
+      .title__span {
+        line-height: 30px;
+      }
+    }
+  }
+
+  &_place_gallery {
+    @include font-params($font-family-main,
+      56px,
+      600,
+      56px);
+    text-align: center;
+
+    @include breakpoint ($breakpoint-s) {
+      & {
+        @include font-params(null,
+          28px,
+          600,
+          28px);
+      }
+    }
+  }
+}

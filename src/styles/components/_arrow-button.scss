@@ -1,0 +1,32 @@
+@use '../abstracts' as *;
+
+.arrow-button {
+  @include reset-button;
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  background-color: $color-button-gray;
+
+  @include background-image(
+    'arrow-red.svg',
+    center,
+    14px 24px,
+  );
+
+  &:hover {
+    cursor: pointer;
+    opacity: .8;
+  }
+
+  &_type_next {
+    transform: rotate(180deg);
+  }
+
+  @include breakpoint ($breakpoint-m) {
+    & {
+      width: 45px;
+      height: 45px;
+      background-size: 10px 20px;
+    }
+  }
+}

@@ -1,0 +1,124 @@
+@use '../abstracts' as *;
+
+.mission {
+  padding: 140px 70px;
+  box-sizing: border-box;
+  width: 100%;
+  position: relative;
+  background-color: $color-bg-red;
+
+  &::before {
+    content: '';
+    @include absolute-position(0, 0, 0, 0);
+    z-index: 1;
+
+    @include background-image(
+      'mission-decoration.svg',
+      -49px 47px,
+      347px 376px
+    );
+
+    opacity: 0.4;
+  }
+
+  &::after {
+    content: '';
+    @include absolute-position(0, 0, 0, 0);
+    z-index: 1;
+
+    transform: rotate(180deg);
+
+    @include background-image(
+      'mission-decoration.svg',
+      -50px 47px,
+      348px 377px
+    );
+
+    opacity: 0.4;
+  }
+
+  &__wrapper {
+    @include reset;
+    @include absolute-position(0, 0, 0, 0);
+    background-color: #A30C33;
+    opacity: .5;
+
+    z-index: 0;
+  }
+
+  &__content {
+    @include reset;
+    width: 100%;
+    @include flex-column;
+    align-items: center;
+    gap: 40px;
+
+    position: relative;
+    z-index: 2;
+  }
+
+  &__title {
+    margin: 0;
+  }
+
+  &__text {
+    @include reset;
+    @include font-params(
+      $font-family-main,
+      32px,
+      400,
+      48px,
+      $color-font-white
+    );
+    text-align: center;
+  }
+
+  @include breakpoint ($breakpoint-m) {
+    & {
+      padding: 100px 30px;
+
+      &::before {
+        background-position: -40px 35px;
+        background-size: 275px 300px;
+      }
+
+      &::after {
+        background-position: -40px 35px;
+        background-size: 275px 300px;
+      }
+    }
+
+    &__content {
+      gap: 20px;
+    }
+  }
+
+  @include breakpoint ($breakpoint-s) {
+    & {
+      padding: 32px 5px;
+
+      &::before {
+        background-position: -34px 20px;
+        background-size: 142px 154px;
+      }
+
+      &::after {
+        background-position: -34px 20px;
+        background-size: 142px 154px;
+      }
+    }
+
+    &__content {
+      gap: 10px;
+    }
+
+    &__text {
+      @include font-params(
+        null,
+        16px,
+        400,
+        1.3em,
+      );
+    }
+  }
+}

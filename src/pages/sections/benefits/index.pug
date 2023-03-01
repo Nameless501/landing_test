@@ -1,0 +1,39 @@
+-
+  const benefits = [
+    { title: 'ДМС', img: 'assets/benefits-dms.svg' },
+    { title: 'Выходной в&nbsp;день&nbsp;рождения', img: 'assets/benefits-birthday.svg' },
+    { title: 'Корпоративная мобильная связь', img: 'assets/benefits-mobile.svg' },
+    { title: 'Корпоративные скидки на спорт', img: 'assets/benefits-gym.svg' },
+    { title: 'LTI', img: 'assets/benefits-lti.svg' },
+  ];
+
+-
+  const motivations = [
+    { title: 'Оргтехники', img: './assets/benefits-equipment.svg' },
+    { title: 'ДМС', img: './assets/benefits-dms.svg' },
+    { title: 'Ипотеки', img: './assets/benefits-mortage.svg' },
+  ];
+
+mixin benefitCard(title, img)
+  figure.benefit-card.benefits__cards-list-item
+    div.benefit-card__image-wrapper
+      img.benefit-card__image(src=img alt="лого")
+    figcaption.benefit-card__caption!= title
+
+section.benefits.content__benefits
+  div.benefits__content-wrapper
+    h2.title.title_place_benefits-compensation.benefits__title Компенсационный пакет
+
+    ul.benefits__cards-list
+      each benefit in benefits
+        +benefitCard(benefit.title, benefit.img)
+
+  span.content-divider.content-divider_place_benefits.benefits__content-divider
+
+  div.benefits__content-wrapper
+    h2.title.title_place_benefits-motivation.benefits__title Программа дополнительной мотивации
+      br
+      span.title__span доплата 12% от суммы
+    ul.benefits__cards-list
+      each motivation in motivations
+        +benefitCard(motivation.title, motivation.img)

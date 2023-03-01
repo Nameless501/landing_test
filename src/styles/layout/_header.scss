@@ -1,0 +1,26 @@
+@use '../abstracts' as *;
+
+.header {
+  @include reset;
+  padding: 30px 70px;
+  width: 100%;
+  @include flex-center-vertical;
+  justify-content: space-between;
+  border: 1px solid $color-border-gray;
+
+  @include breakpoint ($breakpoint-m) {
+    & {
+      padding: 20px 30px;
+    }
+  }
+
+  @include breakpoint ($breakpoint-s) {
+    & {
+      padding: 16px 5px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+      border: .5px solid $color-border-gray;
+    }
+  }
+}

@@ -1,0 +1,61 @@
+// base
+
+@import './base/normalize';
+
+@import './base/fonts';
+
+@import './base/window';
+
+// pages
+
+@import './pages/main';
+
+// layout
+
+@import './layout/header';
+
+@import './layout/content';
+
+@import './layout/lead';
+
+@import './layout/about';
+
+@import './layout/numbers';
+
+@import './layout/map';
+
+@import './layout/mission';
+
+@import './layout/areas';
+
+@import './layout/benefits';
+
+@import './layout/gallery';
+
+// components
+
+@import './components/logo';
+
+@import './components/navigation-links';
+
+@import './components/title';
+
+@import './components/main-button';
+
+@import './components/arrow-button';
+
+@import './components/numbers-card';
+
+@import './components/area-card';
+
+@import './components/benefit-card';
+
+@import './components/content-divider';
+
+@import './components/gallery-slider';
+
+@import './components/maps-slider';
+
+@import './components/regions-dropdown';
+
+@import './components/cities-dropdown';

@@ -1,0 +1,58 @@
+@use '../abstracts' as *;
+
+.regions-dropdown {
+  padding: 100px 0 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  backdrop-filter: blur(5px);
+  @include absolute-position(0, 0, 0, 0);
+  z-index: 10;
+  display: none;
+
+  &:is(.active) {
+    display: block;
+  }
+
+  &__content-wrapper {
+    margin: 0;
+    padding: 30px 68px;
+    box-sizing: border-box;
+    width: 100%;
+    height: fit-content;
+    background-color: $color-bg;
+    box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.06);
+    @include flex-center-horizontal;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  @include breakpoint ($breakpoint-l) {
+    &__content-wrapper {
+      padding: 20px 25px;
+    }
+  }
+
+  @include breakpoint ($breakpoint-m) {
+    &__content-wrapper {
+      padding: 20px 15px;
+      display: grid;
+      grid-template-columns: repeat(4, 150px);
+      grid-auto-rows: auto;
+      gap: 15px auto;
+      justify-content: space-between;
+    }
+  }
+
+  @include breakpoint ($breakpoint-s) {
+    &__content-wrapper {
+      padding: 53px 5px 19px;
+      box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.06);
+      grid-template-columns: 61px 51px 104px;
+      grid-auto-rows: auto;
+      gap: 15px auto;
+      justify-content: space-between;
+    }
+  }
+}

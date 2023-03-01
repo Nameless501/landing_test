@@ -1,0 +1,196 @@
+@use '../abstracts' as *;
+
+.map {
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+  @include flex-column;
+  gap: 90px;
+  position: relative;
+
+  &__header-wrapper {
+    @include reset;
+  }
+
+  &__header {
+    @include reset;
+    padding: 28px 70px;
+    width: 100%;
+    @include flex-center-vertical;
+    justify-content: space-between;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.06);
+  }
+
+  &__header-button {
+    @include reset-button;
+    @include flex-center-vertical;
+    gap: 12px;
+    position: relative;
+    z-index: 11;
+
+    &:hover {
+      cursor: pointer;
+      opacity: .8;
+    }
+  }
+
+  &__header-button-text {
+    @include reset;
+    @include font-params($font-family-main,
+      24px,
+      600,
+      24px,
+      $color-font-black );
+  }
+
+  &__header-button-icon {
+    @include reset;
+    width: 21px;
+    height: 11px;
+    display: block;
+    @include background-image('arrow-black.svg',
+      center,
+      21px 11px,
+    )
+  }
+
+  &__header-button:is(.active) &__header-button-icon {
+    transform: rotate(180deg);
+  }
+
+  &__regions-list {
+    @include reset;
+    @include flex-center-vertical;
+    gap: 30px;
+    position: relative;
+  }
+
+  &__region-name {
+    @include reset;
+    @include font-params($font-family-main,
+      18px,
+      600,
+      20px,
+    );
+
+    &:hover {
+      cursor: pointer;
+      color: $color-font-red;
+    }
+
+    &_type_active {
+      color: $color-font-red;
+      position: relative;
+    }
+
+    &_type_active::after {
+      content: '';
+      @include reset;
+      @include absolute-position(auto, 0, -28px, 0);
+      display: block;
+      height: 3px;
+      width: 100%;
+      background-color: $color-font-red;
+    }
+  }
+
+  &__maps-slider-wrapper {
+    @include reset;
+    padding: 0 30px;
+    position: relative;
+  }
+
+  &__maps-slider {
+    margin: 0;
+  }
+
+  &__dropdown-menu {
+    margin: 0;
+  }
+
+  @include breakpoint ($breakpoint-l) {
+    &__header {
+      padding: 28px 35px;
+    }
+  }
+
+  @include breakpoint ($breakpoint-m) {
+    & {
+      gap: 30px;
+    }
+
+    &__header {
+      padding: 18px 20px 21px;
+      height: 95px;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    &__regions-list {
+      width: max-content;
+      gap: 16px;
+    }
+
+    &__region-name {
+      width: max-content;
+      @include font-params(null,
+        14px,
+        600,
+        16px,
+      );
+
+      &_type_active::after {
+        bottom: -18px;
+        height: 2px;
+      }
+    }
+  }
+
+  @include breakpoint ($breakpoint-s) {
+    & {
+      gap: 20px;
+    }
+
+    &__header-wrapper {
+      height: 95px;
+      overflow: scroll;
+    }
+
+    &__header {
+      padding: 18px 5px 21px;
+      width: fit-content;
+      height: 95px;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-end;
+      gap: 20px;
+      box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.06);
+    }
+
+    &__header-button {
+      gap: 6px;
+    }
+
+    &__header-button-text {
+      @include font-params(null,
+        20px,
+        600,
+        20px);
+    }
+
+    &__region-name_type_active::after {
+      bottom: -18px;
+      height: 1px;
+    }
+
+    &__maps-slider-wrapper {
+      padding: 0 30px;
+    }
+
+    &__maps-slider-wrapper {
+      padding: 0;
+    }
+  }
+}

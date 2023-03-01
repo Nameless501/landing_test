@@ -1,0 +1,20 @@
+-
+  const cards = [
+    { number: '>30 лет', caption: 'на IT-рынке' },
+    { number: '4600', caption: 'сотрудников в России' },
+    { number: '25', caption: 'городов России' },
+    { number: '2000+', caption: 'разработчиков' },
+    { number: '3000+', caption: 'сотрудников ежегодно проходят оценку и обучение' },
+  ]
+
+mixin number-card(number, caption)
+  div.numbers-card.numbers__cards-list-item
+    h2.numbers-card__title= number
+    p.numbers-card__subtitle= caption
+
+
+section.numbers.content__numbers
+  ul.numbers__cards-list
+    each card in cards
+      li
+        +number-card(card.number, card.caption)

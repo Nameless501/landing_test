@@ -1,0 +1,100 @@
+@mixin absolute-position ($top, $left, $bottom, $right) {
+  position: absolute;
+  @if($top) { top: $top };
+  @if($right) { right: $right };
+  @if($bottom) { bottom: $bottom };
+  @if($left) { left: $left };
+}
+
+// reset margin, padding, list style
+
+@mixin reset {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+@mixin reset-button {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: 0;
+  background-color: transparent;
+}
+
+// fonts
+
+@mixin font-params($family, $size, $weight, $lh, $color: false) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $lh;
+
+  @if $color {
+    color: $color;
+  }
+
+  @if $family {
+    font-family: #{$family}, Arial, sans-serif;
+  }
+}
+
+@mixin font-face($family, $weight, $file-name) {
+  font-family: $family;
+  font-style: normal;
+  font-weight: $weight;
+  font-display: swap;
+  src: url('fonts/#{$file-name}.woff') format('woff');
+}
+
+// flexbox
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-column-center {
+  @include flex-column;
+  align-items: center;
+}
+
+@mixin flex-center-vertical {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex-center-horizontal {
+  display: flex;
+  justify-content: center;
+}
+
+// images
+
+@mixin background-image ($file-name, $position: center, $size: cover) {
+  background-image: url('assets/#{$file-name}');
+  background-position: $position;
+  background-repeat: no-repeat;
+  background-size: $size;
+}
+
+// media breakpoints
+
+@mixin breakpoint ($breakpoint) {
+  @media only screen and (max-width: $breakpoint) {
+    @content;
+  }
+}

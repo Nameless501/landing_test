@@ -1,0 +1,25 @@
+-
+  const regions = [
+    { name: 'Москва', cities: [], id: 'dropdown-moscow' },
+    { name: 'Центр', cities: ['Воронеж', 'Ярославль', 'Белгород'], id: 'dropdown-center' },
+    { name: 'Северо-Запад', cities: ['Санкт-Петербург', 'Калининград'], id: 'dropdown-northwest' },
+    { name: 'Юг', cities: ['Ростов-на-Дону', 'Краснодар', 'Волгоград'], id: 'dropdown-south' },
+    { name: 'Волга', cities: ['Казань', 'Самара', 'Уфа', 'Оренбург', 'Нижний Новгород'], id: 'dropdown-volga' },
+    { name: 'Урал', cities: ['Екатеринбург', 'Челябинск', 'Пермь', 'Сергут', 'Тюмень', 'Ижевск'], id: 'dropdown-ural' },
+    { name: 'Сибирь', cities: ['Новосибирск', 'Омск', 'Томск', 'Красноярск', 'Иркутск'], id: 'dropdown-siberia' },
+    { name: 'Дальний восток', cities: ['Хабаровск', 'Владивосток'], id: 'dropdown-east' },
+  ]
+
+div.map__regions-dropdown.regions-dropdown#dropdown-regions
+  div.regions-dropdown__content-wrapper
+    each region in regions
+      div.regions-dropdown__column.cities-dropdown
+
+        button.cities-dropdown__button(type='button' role='dropdown', data-dropdown-label=region.id)
+          span.cities-dropdown__button-title= region.name
+          span.cities-dropdown__button-icon
+
+        ul.cities-dropdown__cities-list(id=region.id)
+          each city in region.cities
+            li
+              span.cities-dropdown__city-name= city

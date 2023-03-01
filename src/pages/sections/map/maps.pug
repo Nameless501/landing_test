@@ -1,0 +1,19 @@
+-
+  const maps = [
+    'assets/map-all.jpg',
+    'assets/map-moscow.jpg',
+    'assets/map-center.jpg',
+    'assets/map-northwest.jpg',
+    'assets/map-south.jpg',
+    'assets/map-volga.jpg',
+    'assets/map-ural.jpg',
+    'assets/map-siberia.jpg',
+    'assets/map-east.jpg',
+  ]
+
+div.map__maps-slider-wrapper
+  div.map__maps-slider.maps-slider
+    ul.maps-slider__slides-list.swiper-wrapper
+      each map in maps
+        li.swiper-slide.maps-slider__slide
+          img.maps-slider__slide-image(src=map alt="карта")

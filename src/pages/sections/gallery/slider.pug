@@ -1,0 +1,22 @@
+-
+  const slides = [
+    { index: 1, img: 'assets/slide-1.jpg' },
+    { index: 2, img: 'assets/slide-2.jpg' },
+    { index: 3, img: 'assets/slide-3.jpg' },
+    { index: 4, img: 'assets/slide-4.jpg' },
+    { index: 5, img: 'assets/slide-5.jpg' },
+  ]
+
+div.gallery-slider.gallery__slider
+
+  div.gallery-slider__controls
+    button.arrow-button.arrow-button_type_prev.gallery-slider__button(type="button")
+    button.arrow-button.arrow-button_type_next.gallery-slider__button(type="button")
+
+  div.gallery-slider__slider-wrapper
+    ul.gallery-slider__slides-list.swiper-wrapper
+      each slide in slides
+        li.swiper-slide.gallery-slider__slide
+          img.gallery-slider__slide-image(src=slide.img, alt='слайд ' + slide.index)
+
+  div.gallery-slider__pagination

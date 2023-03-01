@@ -1,0 +1,122 @@
+@use '../abstracts' as *;
+
+.content {
+  @include reset;
+  width: 100%;
+
+  &__lead {
+    margin: 0;
+  }
+
+  &__about {
+    margin: $margin-l 0 0;
+
+    @include breakpoint ($breakpoint-m) {
+      & {
+        margin-top: $margin-m;
+      }
+    }
+
+    @include breakpoint ($breakpoint-s) {
+      & {
+        margin-top: 60px;
+      }
+    }
+  }
+
+  &__numbers {
+    margin: $margin-l 0 0;
+
+    @include breakpoint ($breakpoint-m) {
+      & {
+        margin-top: $margin-m;
+      }
+    }
+
+    @include breakpoint ($breakpoint-s) {
+      & {
+        margin-top: $margin-s;
+      }
+    }
+  }
+
+  &__map {
+    margin: $margin-l 0 0;
+
+    @include breakpoint ($breakpoint-m) {
+      & {
+        margin-top: $margin-m;
+      }
+    }
+
+    @include breakpoint ($breakpoint-s) {
+      & {
+        margin-top: $margin-s;
+      }
+    }
+  }
+
+  &__mission {
+    margin: $margin-l 0 0;
+
+    @include breakpoint ($breakpoint-m) {
+      & {
+        margin-top: $margin-s;
+      }
+    }
+
+    @include breakpoint ($breakpoint-s) {
+      & {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  &__areas {
+    margin: $margin-l 0 0;
+
+    @include breakpoint ($breakpoint-m) {
+      & {
+        margin-top: $margin-m;
+      }
+    }
+
+    @include breakpoint ($breakpoint-s) {
+      & {
+        margin-top: $margin-s;
+      }
+    }
+  }
+
+  &__benefits {
+    margin: $margin-l auto 0;
+
+    @include breakpoint ($breakpoint-m) {
+      & {
+        margin-top: $margin-m;
+      }
+    }
+
+    @include breakpoint ($breakpoint-s) {
+      & {
+        margin-top: $margin-s;
+      }
+    }
+  }
+
+  &__gallery {
+    margin: $margin-l 0 0;
+
+    @include breakpoint ($breakpoint-m) {
+      & {
+        margin-top: $margin-m;
+      }
+    }
+
+    @include breakpoint ($breakpoint-s) {
+      & {
+        margin-top: $margin-s;
+      }
+    }
+  }
+}

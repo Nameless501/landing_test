@@ -1,0 +1,50 @@
+@use '../abstracts' as *;
+
+.navigation-links {
+  @include reset-list;
+  @include flex-center-vertical;
+  text-decoration: none;
+  gap: 20px;
+
+  li {
+    @include reset;
+  }
+
+  &__item {
+    @include reset;
+    @include font-params(
+      $font-family-main,
+      18px,
+      600,
+      20px,
+      $color-font-black
+    );
+    text-decoration: none;
+
+    &__hover {
+      cursor: pointer;
+      opacity: .8;
+    }
+  }
+
+  @include breakpoint ($breakpoint-m) {
+    & {
+      gap: 10px;
+    }
+
+    &__item {
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+
+  @include breakpoint ($breakpoint-s) {
+    & {
+      flex-wrap: wrap;
+      align-items: flex-start;
+      gap: 5px 10px;
+    }
+  }
+}
+
+

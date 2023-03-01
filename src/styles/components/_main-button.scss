@@ -1,0 +1,44 @@
+@use '../abstracts' as *;
+
+.main-button {
+  @include reset-button;
+  padding: 18px 28px;
+  border-radius: 8px;
+  background-color: $color-button;
+  text-decoration: none;
+
+  @include font-params(
+    $font-family-main,
+    18px,
+    600,
+    20px,
+    $color-font-white
+  );
+
+  &:hover {
+    cursor: pointer;
+    background-color: $color-button-hover;
+  }
+
+  &:visited {
+    color: $color-font-white;
+  }
+
+  @include breakpoint ($breakpoint-m) {
+    & {
+      padding: 12px 26px;
+    }
+  }
+
+  @include breakpoint ($breakpoint-s) {
+    & {
+      padding: 6.5px 25.5px;
+      @include font-params(
+        null,
+        16px,
+        600,
+        19px
+      );
+    }
+  }
+}
