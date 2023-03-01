@@ -4,7 +4,7 @@
 
 
 
-<div align="center"><a href="https://nameless501.github.io/landing_softline/">Посмотреть на gh-pages</a></div>
+<div align="center"><a href="https://nameless501.github.io/landing_test/">Посмотреть на gh-pages</a></div>
 
 ___
 
