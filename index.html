@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>Softline</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body class="window">
+    <div class="main">
+      <header class="header"><img class="logo header__logo" src="assets/logo.svg" alt="Логотип компании">
+        <nav class="navigation-links header__navigation-links"><a class="navigation-links__item" href="*">Облачные решения</a><a class="navigation-links__item" href="*">Кибербезопасность</a><a class="navigation-links__item" href="*">Импортозамещение</a><a class="navigation-links__item" href="*">Цифровая трансформация</a>
+        </nav>
+      </header>
+      <main class="content main__content">
+        <section class="lead content__lead">
+          <h1 class="title title_place_lead lead__title">Поставщик услуг цифровой трансформации и&nbsp;кибербезопасности</h1><a class="main-button lead__button" href="https://softline.ru" target="_blank">На сайт</a>
+        </section>
+        <section class="about content__about">
+          <article class="about__card">
+            <p class="about__text"><span class="about__text-accent">Softline</span>
+              – ведущий поставщик IT-решений и сервисов.*
+              Мы&nbsp;предлагаем комплексные IT-решения, облака, программное и&nbsp;аппаратное обеспечение,
+              решения по&nbsp;цифровой трансформации и&nbsp;кибербезопасности, а&nbsp;также широкий спектр IT-услуг.
+            </p>
+          </article>
+        </section>
+        <section class="numbers content__numbers">
+          <ul class="numbers__cards-list">
+            <li>
+                      <div class="numbers-card numbers__cards-list-item">
+                        <h2 class="numbers-card__title">&gt;30 лет</h2>
+                        <p class="numbers-card__subtitle">на IT-рынке</p>
+                      </div>
+            </li>
+            <li>
+                      <div class="numbers-card numbers__cards-list-item">
+                        <h2 class="numbers-card__title">4600</h2>
+                        <p class="numbers-card__subtitle">сотрудников в России</p>
+                      </div>
+            </li>
+            <li>
+                      <div class="numbers-card numbers__cards-list-item">
+                        <h2 class="numbers-card__title">25</h2>
+                        <p class="numbers-card__subtitle">городов России</p>
+                      </div>
+            </li>
+            <li>
+                      <div class="numbers-card numbers__cards-list-item">
+                        <h2 class="numbers-card__title">2000+</h2>
+                        <p class="numbers-card__subtitle">разработчиков</p>
+                      </div>
+            </li>
+            <li>
+                      <div class="numbers-card numbers__cards-list-item">
+                        <h2 class="numbers-card__title">3000+</h2>
+                        <p class="numbers-card__subtitle">сотрудников ежегодно проходят оценку и обучение</p>
+                      </div>
+            </li>
+          </ul>
+        </section>
+        <section class="map content__map">
+          <div class="map__header-wrapper">
+            <header class="map__header">
+              <button class="map__header-button dropdown-button" role="dropdown" data-dropdown-label="dropdown-regions"><span class="map__header-button-text">Офисы Softline</span><span class="map__header-button-icon"></span></button>
+              <div class="map__regions-list"></div>
+            </header>
+          </div>
+          <div class="map__regions-dropdown regions-dropdown" id="dropdown-regions">
+            <div class="regions-dropdown__content-wrapper">
+              <div class="regions-dropdown__column cities-dropdown">
+                <button class="cities-dropdown__button" type="button" role="dropdown" data-dropdown-label="dropdown-moscow"><span class="cities-dropdown__button-title">Москва</span><span class="cities-dropdown__button-icon"></span></button>
+                <ul class="cities-dropdown__cities-list" id="dropdown-moscow">
+                </ul>
+              </div>
+              <div class="regions-dropdown__column cities-dropdown">
+                <button class="cities-dropdown__button" type="button" role="dropdown" data-dropdown-label="dropdown-center"><span class="cities-dropdown__button-title">Центр</span><span class="cities-dropdown__button-icon"></span></button>
+                <ul class="cities-dropdown__cities-list" id="dropdown-center">
+                  <li><span class="cities-dropdown__city-name">Воронеж</span></li>
+                  <li><span class="cities-dropdown__city-name">Ярославль</span></li>
+                  <li><span class="cities-dropdown__city-name">Белгород</span></li>
+                </ul>
+              </div>
+              <div class="regions-dropdown__column cities-dropdown">
+                <button class="cities-dropdown__button" type="button" role="dropdown" data-dropdown-label="dropdown-northwest"><span class="cities-dropdown__button-title">Северо-Запад</span><span class="cities-dropdown__button-icon"></span></button>
+                <ul class="cities-dropdown__cities-list" id="dropdown-northwest">
+                  <li><span class="cities-dropdown__city-name">Санкт-Петербург</span></li>
+                  <li><span class="cities-dropdown__city-name">Калининград</span></li>
+                </ul>
+              </div>
+              <div class="regions-dropdown__column cities-dropdown">
+                <button class="cities-dropdown__button" type="button" role="dropdown" data-dropdown-label="dropdown-south"><span class="cities-dropdown__button-title">Юг</span><span class="cities-dropdown__button-icon"></span></button>
+                <ul class="cities-dropdown__cities-list" id="dropdown-south">
+                  <li><span class="cities-dropdown__city-name">Ростов-на-Дону</span></li>
+                  <li><span class="cities-dropdown__city-name">Краснодар</span></li>
+                  <li><span class="cities-dropdown__city-name">Волгоград</span></li>
+                </ul>
+              </div>
+              <div class="regions-dropdown__column cities-dropdown">
+                <button class="cities-dropdown__button" type="button" role="dropdown" data-dropdown-label="dropdown-volga"><span class="cities-dropdown__button-title">Волга</span><span class="cities-dropdown__button-icon"></span></button>
+                <ul class="cities-dropdown__cities-list" id="dropdown-volga">
+                  <li><span class="cities-dropdown__city-name">Казань</span></li>
+                  <li><span class="cities-dropdown__city-name">Самара</span></li>
+                  <li><span class="cities-dropdown__city-name">Уфа</span></li>
+                  <li><span class="cities-dropdown__city-name">Оренбург</span></li>
+                  <li><span class="cities-dropdown__city-name">Нижний Новгород</span></li>
+                </ul>
+              </div>
+              <div class="regions-dropdown__column cities-dropdown">
+                <button class="cities-dropdown__button" type="button" role="dropdown" data-dropdown-label="dropdown-ural"><span class="cities-dropdown__button-title">Урал</span><span class="cities-dropdown__button-icon"></span></button>
+                <ul class="cities-dropdown__cities-list" id="dropdown-ural">
+                  <li><span class="cities-dropdown__city-name">Екатеринбург</span></li>
+                  <li><span class="cities-dropdown__city-name">Челябинск</span></li>
+                  <li><span class="cities-dropdown__city-name">Пермь</span></li>
+                  <li><span class="cities-dropdown__city-name">Сергут</span></li>
+                  <li><span class="cities-dropdown__city-name">Тюмень</span></li>
+                  <li><span class="cities-dropdown__city-name">Ижевск</span></li>
+                </ul>
+              </div>
+              <div class="regions-dropdown__column cities-dropdown">
+                <button class="cities-dropdown__button" type="button" role="dropdown" data-dropdown-label="dropdown-siberia"><span class="cities-dropdown__button-title">Сибирь</span><span class="cities-dropdown__button-icon"></span></button>
+                <ul class="cities-dropdown__cities-list" id="dropdown-siberia">
+                  <li><span class="cities-dropdown__city-name">Новосибирск</span></li>
+                  <li><span class="cities-dropdown__city-name">Омск</span></li>
+                  <li><span class="cities-dropdown__city-name">Томск</span></li>
+                  <li><span class="cities-dropdown__city-name">Красноярск</span></li>
+                  <li><span class="cities-dropdown__city-name">Иркутск</span></li>
+                </ul>
+              </div>
+              <div class="regions-dropdown__column cities-dropdown">
+                <button class="cities-dropdown__button" type="button" role="dropdown" data-dropdown-label="dropdown-east"><span class="cities-dropdown__button-title">Дальний восток</span><span class="cities-dropdown__button-icon"></span></button>
+                <ul class="cities-dropdown__cities-list" id="dropdown-east">
+                  <li><span class="cities-dropdown__city-name">Хабаровск</span></li>
+                  <li><span class="cities-dropdown__city-name">Владивосток</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="map__maps-slider-wrapper">
+            <div class="map__maps-slider maps-slider">
+              <ul class="maps-slider__slides-list swiper-wrapper">
+                <li class="swiper-slide maps-slider__slide"><img class="maps-slider__slide-image" src="assets/map-all.jpg" alt="карта"></li>
+                <li class="swiper-slide maps-slider__slide"><img class="maps-slider__slide-image" src="assets/map-moscow.jpg" alt="карта"></li>
+                <li class="swiper-slide maps-slider__slide"><img class="maps-slider__slide-image" src="assets/map-center.jpg" alt="карта"></li>
+                <li class="swiper-slide maps-slider__slide"><img class="maps-slider__slide-image" src="assets/map-northwest.jpg" alt="карта"></li>
+                <li class="swiper-slide maps-slider__slide"><img class="maps-slider__slide-image" src="assets/map-south.jpg" alt="карта"></li>
+                <li class="swiper-slide maps-slider__slide"><img class="maps-slider__slide-image" src="assets/map-volga.jpg" alt="карта"></li>
+                <li class="swiper-slide maps-slider__slide"><img class="maps-slider__slide-image" src="assets/map-ural.jpg" alt="карта"></li>
+                <li class="swiper-slide maps-slider__slide"><img class="maps-slider__slide-image" src="assets/map-siberia.jpg" alt="карта"></li>
+                <li class="swiper-slide maps-slider__slide"><img class="maps-slider__slide-image" src="assets/map-east.jpg" alt="карта"></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section class="mission content__mission">
+          <div class="mission__wrapper"></div>
+          <div class="mission__content">
+            <h2 class="title title_place_mission mission__title">Миссия Softline</h2>
+            <p class="mission__text">Мы помогаем организациям трансформироваться, работать эффективно и&nbsp;безопасно в&nbsp;условиях цифровой экономики.</p>
+          </div>
+        </section>
+        <section class="areas content__areas">
+          <h2 class="title title_place_areas areas__title">Направления бизнеса</h2>
+          <ul class="areas__cards-list">
+            <li>
+              <article class="area-card areas__cards-list-item area-card_type_solutions" id="dropdown-areas-solutions">
+                <div class="area-card__content-wrapper">
+                  <button class="area-card__button" role="dropdown" data-dropdown-label="dropdown-areas-solutions"><span class="title title_place_area-card area-card__button-title">Решения Softline</span><span class="area-card__button-icon"></span></button>
+                  <p class="area-card__text">ГК Softline предлагает клиентам собственную линейку оборудования (ПК, серверы, торговое оборудование и проч.), разработку программных продуктов, облачных решений, решений в области информационной безопасности.</p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="area-card areas__cards-list-item area-card_type_security" id="dropdown-areas-security">
+                <div class="area-card__content-wrapper">
+                  <button class="area-card__button" role="dropdown" data-dropdown-label="dropdown-areas-security"><span class="title title_place_area-card area-card__button-title">Кибербезопасность</span><span class="area-card__button-icon"></span></button>
+                  <p class="area-card__text">Softline обладает всеми необходимыми государственными лицензиями для организации проектов по информационной безопасности и аттестации.</p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="area-card areas__cards-list-item area-card_type_replacement" id="dropdown-areas-replacement">
+                <div class="area-card__content-wrapper">
+                  <button class="area-card__button" role="dropdown" data-dropdown-label="dropdown-areas-replacement"><span class="title title_place_area-card area-card__button-title">Импортозамещение</span><span class="area-card__button-icon"></span></button>
+                  <p class="area-card__text">ГК Softline обладает широчайшим портфелем решений и услуг для импортозамещения, включая ПО и оборудование собственного производства.</p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="area-card areas__cards-list-item area-card_type_cloud" id="dropdown-areas-cloud">
+                <div class="area-card__content-wrapper">
+                  <button class="area-card__button" role="dropdown" data-dropdown-label="dropdown-areas-cloud"><span class="title title_place_area-card area-card__button-title">Облачные решения</span><span class="area-card__button-icon"></span></button>
+                  <p class="area-card__text">Softline использует современные облачные решения как российских, так и международных вендоров для масштабирования бизнеса своих клиентов. Подписки, услуги, трансформация.</p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="area-card areas__cards-list-item area-card_type_transformation" id="dropdown-areas-transformation">
+                <div class="area-card__content-wrapper">
+                  <button class="area-card__button" role="dropdown" data-dropdown-label="dropdown-areas-transformation"><span class="title title_place_area-card area-card__button-title">Цифровая трансформация и разработка ПО</span><span class="area-card__button-icon"></span></button>
+                  <p class="area-card__text">Softline использует современные технологи и новые возможности для увеличения производительности бизнеса заказчика. В штате ГК Softline - 2000+ разработчиков, которые трансформируют ПО под нужды конкретного предприятия.</p>
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="area-card areas__cards-list-item area-card_type_support" id="dropdown-areas-support">
+                <div class="area-card__content-wrapper">
+                  <button class="area-card__button" role="dropdown" data-dropdown-label="dropdown-areas-support"><span class="title title_place_area-card area-card__button-title">Техническая поддержка Softline</span><span class="area-card__button-icon"></span></button>
+                  <p class="area-card__text">200+ инженеров, 24 часа в сутки, 7 дней в неделю, 12 месяцев в году, сервисное партнерство с 30+ мировыми производителями.</p>
+                </div>
+              </article>
+            </li>
+          </ul>
+        </section>
+        <section class="benefits content__benefits">
+          <div class="benefits__content-wrapper">
+            <h2 class="title title_place_benefits-compensation benefits__title">Компенсационный пакет</h2>
+            <ul class="benefits__cards-list">
+                      <figure class="benefit-card benefits__cards-list-item">
+                        <div class="benefit-card__image-wrapper"><img class="benefit-card__image" src="assets/benefits-dms.svg" alt="лого"></div>
+                        <figcaption class="benefit-card__caption">ДМС</figcaption>
+                      </figure>
+                      <figure class="benefit-card benefits__cards-list-item">
+                        <div class="benefit-card__image-wrapper"><img class="benefit-card__image" src="assets/benefits-birthday.svg" alt="лого"></div>
+                        <figcaption class="benefit-card__caption">Выходной в&nbsp;день&nbsp;рождения</figcaption>
+                      </figure>
+                      <figure class="benefit-card benefits__cards-list-item">
+                        <div class="benefit-card__image-wrapper"><img class="benefit-card__image" src="assets/benefits-mobile.svg" alt="лого"></div>
+                        <figcaption class="benefit-card__caption">Корпоративная мобильная связь</figcaption>
+                      </figure>
+                      <figure class="benefit-card benefits__cards-list-item">
+                        <div class="benefit-card__image-wrapper"><img class="benefit-card__image" src="assets/benefits-gym.svg" alt="лого"></div>
+                        <figcaption class="benefit-card__caption">Корпоративные скидки на спорт</figcaption>
+                      </figure>
+                      <figure class="benefit-card benefits__cards-list-item">
+                        <div class="benefit-card__image-wrapper"><img class="benefit-card__image" src="assets/benefits-lti.svg" alt="лого"></div>
+                        <figcaption class="benefit-card__caption">LTI</figcaption>
+                      </figure>
+            </ul>
+          </div><span class="content-divider content-divider_place_benefits benefits__content-divider"></span>
+          <div class="benefits__content-wrapper">
+            <h2 class="title title_place_benefits-motivation benefits__title">Программа дополнительной мотивации<br><span class="title__span">доплата 12% от суммы</span></h2>
+            <ul class="benefits__cards-list">
+                      <figure class="benefit-card benefits__cards-list-item">
+                        <div class="benefit-card__image-wrapper"><img class="benefit-card__image" src="./assets/benefits-equipment.svg" alt="лого"></div>
+                        <figcaption class="benefit-card__caption">Оргтехники</figcaption>
+                      </figure>
+                      <figure class="benefit-card benefits__cards-list-item">
+                        <div class="benefit-card__image-wrapper"><img class="benefit-card__image" src="./assets/benefits-dms.svg" alt="лого"></div>
+                        <figcaption class="benefit-card__caption">ДМС</figcaption>
+                      </figure>
+                      <figure class="benefit-card benefits__cards-list-item">
+                        <div class="benefit-card__image-wrapper"><img class="benefit-card__image" src="./assets/benefits-mortage.svg" alt="лого"></div>
+                        <figcaption class="benefit-card__caption">Ипотеки</figcaption>
+                      </figure>
+            </ul>
+          </div>
+        </section>
+        <section class="gallery content__gallery">
+          <h2 class="title title_place_gallery gallery__title">Корпоративная жизнь</h2>
+          <div class="gallery-slider gallery__slider">
+            <div class="gallery-slider__controls">
+              <button class="arrow-button arrow-button_type_prev gallery-slider__button" type="button"></button>
+              <button class="arrow-button arrow-button_type_next gallery-slider__button" type="button"></button>
+            </div>
+            <div class="gallery-slider__slider-wrapper">
+              <ul class="gallery-slider__slides-list swiper-wrapper">
+                <li class="swiper-slide gallery-slider__slide"><img class="gallery-slider__slide-image" src="assets/slide-1.jpg" alt="слайд 1"></li>
+                <li class="swiper-slide gallery-slider__slide"><img class="gallery-slider__slide-image" src="assets/slide-2.jpg" alt="слайд 2"></li>
+                <li class="swiper-slide gallery-slider__slide"><img class="gallery-slider__slide-image" src="assets/slide-3.jpg" alt="слайд 3"></li>
+                <li class="swiper-slide gallery-slider__slide"><img class="gallery-slider__slide-image" src="assets/slide-4.jpg" alt="слайд 4"></li>
+                <li class="swiper-slide gallery-slider__slide"><img class="gallery-slider__slide-image" src="assets/slide-5.jpg" alt="слайд 5"></li>
+              </ul>
+            </div>
+            <div class="gallery-slider__pagination"></div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
