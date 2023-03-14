@@ -15,7 +15,7 @@ div.map__regions-dropdown.regions-dropdown#dropdown-regions
     each region in regions
       div.regions-dropdown__column.cities-dropdown
 
-        button.cities-dropdown__button(type='button' role='dropdown', data-dropdown-label=region.id)
+        button.cities-dropdown__button(type='button' data-role='dropdown', data-dropdown-label=region.id)
           span.cities-dropdown__button-title= region.name
           span.cities-dropdown__button-icon
 

@@ -17,7 +17,7 @@ export default function handleDropdowns() {
     }
   })
 
-  const dropdowns = document.querySelectorAll('[role="dropdown"]');
+  const dropdowns = document.querySelectorAll('[data-role="dropdown"]');
 
   function toggleDropdown(evt) {
     const id = evt.currentTarget.dataset.dropdownLabel;

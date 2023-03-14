@@ -26,7 +26,8 @@ section.benefits.content__benefits
 
     ul.benefits__cards-list
       each benefit in benefits
-        +benefitCard(benefit.title, benefit.img)
+        li
+          +benefitCard(benefit.title, benefit.img)
 
   span.content-divider.content-divider_place_benefits.benefits__content-divider
 
@@ -36,4 +37,5 @@ section.benefits.content__benefits
       span.title__span доплата 12% от суммы
     ul.benefits__cards-list
       each motivation in motivations
-        +benefitCard(motivation.title, motivation.img)
+        li
+          +benefitCard(motivation.title, motivation.img)
